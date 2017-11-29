@@ -4,3 +4,8 @@ dependency-reduced-pom.xml
 # Editor generated files
 *.iml
 .idea/
+
+# Java language server
+.settings
+.project
+.classpath
