@@ -2175,6 +2175,44 @@
                     <quiet>true</quiet>
                 </configuration>
             </plugin>
+            <!-- 以下 libraries 已無法從 maven 上安裝了 -->
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-install-plugin</artifactId>
+              <inherited>false</inherited>
+              <executions>
+                <execution>
+                  <id>install-jar-lib-jdmkrt</id>
+                  <goals>
+                    <goal>install-file</goal>
+                  </goals>
+                  <phase>validate</phase>
+                  <configuration>
+                    <groupId>external</groupId>
+                    <artifactId>jdmkrt</artifactId>
+                    <version>2007-01-10</version>
+                    <packaging>jar</packaging>
+                    <file>${basedir}/extlib/jdmkrt-2007-01-10.jar</file>
+                    <generatePom>true</generatePom>
+                  </configuration>
+                </execution>
+                <execution>
+                  <id>install-jar-lib-jdmktk</id>
+                  <goals>
+                    <goal>install-file</goal>
+                  </goals>
+                  <phase>validate</phase>
+                  <configuration>
+                    <groupId>external</groupId>
+                    <artifactId>jdmktk</artifactId>
+                    <version>2007-01-10</version>
+                    <packaging>jar</packaging>
+                    <file>${basedir}/extlib/jdmktk-2007-01-10.jar</file>
+                    <generatePom>true</generatePom>
+                  </configuration>
+                </execution>
+              </executions>
+            </plugin>
         </plugins>
 
         <pluginManagement>
